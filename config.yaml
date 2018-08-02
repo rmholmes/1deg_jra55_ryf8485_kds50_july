@@ -13,12 +13,12 @@ restart_freq: 1
 
 # Model configuration
 model: access-om2
-input: common_1deg_jra55
+input: /short/public/access-om2/input_46fb3d3b/common_1deg_jra55
 submodels:
     - name: atmosphere
       model: yatm
-      exe: yatm_7c3a8c04.exe
-      input: yatm_1deg
+      exe: /short/public/access-om2/bin/yatm_d4a9c5f2d.exe
+      input: /short/public/access-om2/input_46fb3d3b/yatm_1deg
       ncpus: 1
 
     - name: ocean
@@ -28,13 +28,13 @@ submodels:
               - /g/data1/ua8/MOM/initial_conditions/WOA/10_KDS50
               - /g/data1/ua8/MOM/grids/10/topog/KDS50
               - /g/data/ua8/MOM/salinity_restoring/10
-              - mom_1deg
+              - /short/public/access-om2/input_46fb3d3b/mom_1deg
       ncpus: 216
 
     - name: ice
       model: cice5
-      exe: cice_auscom_360x300_24p_df982d28.exe
-      input: cice_1deg
+      exe: /short/public/access-om2/bin/cice_auscom_360x300_24p_84f2f802.exe
+      input: /short/public/access-om2/input_46fb3d3b/cice_1deg
       ncpus: 24
 
 platform:
@@ -46,7 +46,7 @@ stacksize: unlimited
 collate_walltime: 1:00:00
 collate_queue: express
 collate_ncpus: 1
-collate_mem: 8GB
+collate_mem: 12GB
 collate_flags: -n4 -z -m -r
 mpirun: --mca orte_base_help_aggregate 0
 qsub_flags: -lother=hyperthread -W umask=027
