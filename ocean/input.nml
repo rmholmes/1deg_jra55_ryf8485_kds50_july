@@ -3,14 +3,13 @@
     chk_i2o_fields = .false.
     chk_o2i_fields = .false.
     do_ice_once = .false.
-    dt_cpl = 5400
     fixmeltt = .false.
     frazil_factor = 1.0
     iceform_adj_salt = .false.
     icemlt_factor = 1.0
     kmxice = 5
     pop_icediag = .true.
-    redsea_gulfbay_sfix = .true.
+    redsea_gulfbay_sfix = .false.
     sign_stflx = 1.0
     tmelt = -0.216
     use_ioaice = .true.
