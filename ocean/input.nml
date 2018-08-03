@@ -127,13 +127,14 @@
     use_this_module = .true.
 /
 &ocean_density_nml
-    neutral_density_theta = .true.
+    neutral_density_salt = .true.
+    neutral_density_theta = .false.
     neutral_density_potrho = .false.
     eos_linear = .false.
     eos_preteos10 = .true.
-    layer_nk = 74
-    neutralrho_max = 34.0
-    neutralrho_min = -3.0
+    layer_nk = 40
+    neutralrho_max = 40.0
+    neutralrho_min = 30.0
     potrho_max = 1038.0
     potrho_min = 1028.0
 /
